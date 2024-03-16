@@ -1,5 +1,5 @@
 # ATM_Machine
-This is versatile and user-friendly program where user can login into their bank account and perform various functions.
+This is versatile and user-friendly ATM program where user can login into their bank account and perform various banking functions.
 
 # Features
 1. View Balance
@@ -10,5 +10,5 @@ This is versatile and user-friendly program where user can login into their bank
 
 
 # Usage
-Clone or download the repository to your local machine using: 'git clone https://github.com/AneleMaphalala/ATM_Machine.git'.
-Ensure you have Java installed.
+- Clone or download the repository to your local machine using: 'git clone https://github.com/AneleMaphalala/ATM_Machine.git'.
+- Ensure you have Java installed.
