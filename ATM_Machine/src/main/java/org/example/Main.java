@@ -21,20 +21,31 @@ public class Main {
 
         if((ATMNumber == atmNumber) && (ATMPin == atmPin)){
             while(true) {
-                System.out.println("1. View Available Balance\n2. Withdraw Amount\n3. Deposit Amount\n4. View MiniStatement\n5. Exit");
+                System.out.println("1. View Available Balance\n2. Withdraw Amount\n3. Deposit Amount\n4. Transfer Amount\n5. Display MiniStatement\n6. Exit");
                 System.out.println("Enter Option: ");
                 int option = in.nextInt();
                 if(option == 1){
                     op.viewBalance();
                 }else if(option == 2) {
-
+                    System.out.println("Enter Amount to Withdraw: ");
+                    double withdrawAmount = in.nextDouble();
+                    op.withdrawAmount(withdrawAmount);
                 } else if(option == 3){
                     System.out.println("Enter Amount to Deposit: ");
                     double depositAmount = in.nextDouble();
                     op.depositAmount(depositAmount);
                 } else if(option == 4){
-
-                } else if(option ==5){
+                    System.out.println("Enter Beneficiary Account Number: ");
+                    int accountNumber = in.nextInt();
+                    System.out.println("Enter Beneficiary Name: ");
+                    String name = in.next();
+                    System.out.println("Enter Amount to Transfer: ");
+                    double amountToTransfer = in.nextDouble();
+                    System.out.println("R"+ amountToTransfer + " has been transferred to " + name + " in the account number: "+ accountNumber);
+                    op.transferAmount(name, accountNumber, amountToTransfer);
+                }else if(option == 5){
+                    op.viewMiniStatement();
+                }else if(option ==6){
                     System.out.println("Please remove your card\nThank you for using the ATM!\nSee you next time!");
                     System.exit(0);
                 }
@@ -44,7 +55,7 @@ public class Main {
             }
         }
         else{
-            System.out.println(("Incorrect ATM Number or ATM Pin"));
+            System.out.println(("Incorrect AT M Number or ATM Pin"));
             System.exit(0);
         }
     }
